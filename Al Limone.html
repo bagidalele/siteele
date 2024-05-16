@@ -1,0 +1,60 @@
+<DOCTYPE HTML!>
+    <html lang="pr-br">
+        <head>
+            <title>Limãoceitas</title>
+            <script type="text/javascript">
+
+                const calculaNota = () =>{
+                    const faria = document.notaForm.elements["faria"].value;
+    
+                    const gostou = document.notaForm.elements["gostou"].value;
+                    
+                    const nota = (jaJogou+gostou)/2;
+    
+                    if(nota>=0 && nota<=4 ){
+                        alert("Você não gostou dessa receita");
+                    }
+                    else if(nota>=5 && nota<6){
+                        alert("Você gosta pouco dessa receita");
+                    }
+                    else if(nota>=7){
+                        alert("Você gosta muito dessa receita");
+                    }
+    }
+            </script>
+            <link rel="stylesheet" type="text/css" href="style.css"/>
+        </head>
+        <body>
+            
+           <h1>Al Limone</h1>
+           <img src="espaguete-al-limone.webp"">
+          <h2>Ingredientes</h2>
+           <p>500g de espaguete</p>
+                <p>250 ml de creme de leite fresco</p>
+               <p>80g de manteiga</p> 
+               <p>80g de queijo parmesão ralado</p> 
+                <p>1 limão-siciliano, raspas e sumo</p>
+                <p>Pimenta-do-reino branco a gosto</p>
+                <p>Sal a gosto</p>
+            
+<h2>Modo de Prepro</h2>
+     <p>1.Cozinhe a massa em água fervente com sal.</p>    
+<p> 2.Derreta a manteiga, com o sumo e as raspas do limão numa frigideira grande que acomode a massa pronta e deixe no fogo por uns 30 segundos. </p>
+<p>3.Misture o creme de leite e deixe reduzir, mexendo. Tempere com sal e pimenta</p>
+<p>4.Desligue o fogo.</p>
+<p>5.Aqueça o molho, escorra a massa e misture ao molho. Sirva com o queijo parmesão.</p>
+<p>6.E está pronto sua AL Limone</p>
+</p>
+<form id="notaForm" name="notaForm" action="#">
+    <label for="faria">De 0 a 10, você faria essa limãoceita?</label>
+    <input type="text" id="faria" name="faria">
+    <br>
+
+    <label for="gostou">De 0 a 10, quanto você gostou dessa limãoceita?</label>
+    <input type="text" id="gostou" name="gostou">
+    <br>
+
+    <input type="submit" value="Calcular" onclick="calculaNota()">
+</form>
+        </body>
+    </html>

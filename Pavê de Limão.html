@@ -1,0 +1,60 @@
+<DOCTYPE HTML!>
+    <html lang="pr-br">
+        <head>
+            <title>Limãoceitas</title>
+            <script type="text/javascript">
+
+                const calculaNota = () =>{
+                    const faria = document.notaForm.elements["faria"].value;
+    
+                    const gostou = document.notaForm.elements["gostou"].value;
+                    
+                    const nota = (jaJogou+gostou)/2;
+    
+                    if(nota>=0 && nota<=4 ){
+                        alert("Você não gostou dessa receita");
+                    }
+                    else if(nota>=5 && nota<6){
+                        alert("Você gosta pouco dessa receita");
+                    }
+                    else if(nota>=7){
+                        alert("Você gosta muito dessa receita");
+                    }
+    }
+            </script>
+            <link rel="stylesheet" type="text/css" href="style.css"/>
+        </head>
+        <body>
+            <h1>Pavê de Limão</h1>
+            <img src="pave-de-limao-foto.webp">
+            <h2>Igredientes</h2>
+            <p>1 Leite condensado (lata ou caixinha) 395 g
+               <p> 4 colheres (sopa) de suco de limão</p>
+                <p>1 caixinha de Creme de Leite</p>
+                <p>raspas da casca de 1 limão</p>
+                <p>1 pacote de biscoito tipo champanhe</p>
+                <p>meia xícara (chá) de Leite Líquido Integral</p>
+            <h2>Modo de preparo</h2>
+            <p> 1.  Em um recipiente, misture bem o Leite condensado, o suco de limão, o Creme de Leite e as raspas de limão até obter um creme homogêneo e consistente.</p>
+                
+             <p>   2.  Umedeça os biscoitos no Leite e forre um recipiente refratário médio com parte dos biscoitos umedecidos.</p>
+                
+              <p> 3.  Monte o pavê, alternando camadas de biscoitos e de creme de limão.</p> 
+                
+               <p> 4.  Termine com uma camada de creme, cubra e leve à geladeira por cerca de 3 horas. </p>
+      <p> E está pronto seu pavê de limão.</p>
+      <form id="notaForm" name="notaForm" action="#">
+        <label for="faria">De 0 a 10, você faria essa limãoceita?</label>
+        <input type="text" id="faria" name="faria">
+        <br>
+
+        <label for="gostou">De 0 a 10, quanto você gostou dessa limãoceita?</label>
+        <input type="text" id="gostou" name="gostou">
+        <br>
+
+        <input type="submit" value="Calcular" onclick="calculaNota()">
+    </form>
+      
+      
+            </body>
+    </html>
